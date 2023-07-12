@@ -1,12 +1,16 @@
-###############################################
+##################################################
 
-# Run Github`s Super Linter against code base #
+# Run GitHub's Super Linter against code base #
 
-###############################################
+##################################################
 
 
 
-name: Githubs`s Super Linter
+---
+
+name: GitHub's Super Linter
+
+
 
 on: push
 
@@ -15,30 +19,28 @@ on: push
 jobs:
 
   run-linters:
- 
-    name: Github`s Super Linter  
-  
+
+    name: GitHub's Super Linter
+
     runs-on: ubuntu-latest
-    
-   
-   
- steps:
- 
-       - name: Check out Git repository
-   
-         uses: actions/checkout@master
-     
-   
-       
-       - name: Run GitHub Super Linter
-     
-         uses: github/super-linter@master
-   
-         env:
-      
-           VALIDATE_ALL_CODEBASE: true
-      
-           DEFAULT_BRANCH: main
-      
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
+
+
+
+    steps:
+
+      - name: Check out Git repository
+
+        uses: actions/checkout@main
+
+
+
+      - name: Check out Git repository
+        uses: actions/checkout@main
+
+        env:
+
+          VALIDATE_ALL_CODEBASE: true
+
+          DEFAULT_BRANCH: main
+
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
